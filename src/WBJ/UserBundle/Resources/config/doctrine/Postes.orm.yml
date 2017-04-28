@@ -1,0 +1,46 @@
+WBJ\UserBundle\Entity\Postes:
+    type: entity
+    table: Postes
+    indexes:
+        Postes_FKIndex1:
+            columns:
+                - Usuarios_id_user
+    id:
+        idPost:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            column: id_post
+            generator:
+                strategy: IDENTITY
+    fields:
+        titulo:
+            type: string
+            nullable: true
+            length: 80
+            fixed: false
+            comment: ''
+        curpoPost:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: curpo_post
+        fecha:
+            type: date
+            nullable: true
+            comment: ''
+    manyToOne:
+        usuariosUser:
+            targetEntity: Usuarios
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Usuarios_id_user:
+                    referencedColumnName: id_user
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

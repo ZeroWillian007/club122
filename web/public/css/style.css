@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/03/2017, 12:03:54
+    Author     : a
+*/
+#carousel-222580{
+   
+    
+}
+#menu{
+  
+    
+}
+.login{
+    padding-top: 5%;
+    
+}
+#meta1{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color: #f8f8ff;
+    background: #000000;
+}
+.servicios{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.serviciosInter{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #f5f5f5;
+}
+.nuestracomp{
+    padding-top: 2%;
+    padding-bottom: 8%;
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: #f5f5f5;
+    
+}
+.equipo{
+   padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%; 
+}
+span{
+    cursor: pointer;
+    color: green;
+}
+span:hover{
+    cursor: pointer;
+    color: blue;
+}
+.solicitar{
+    margin-top: 10%;
+}
+.contatosmarco{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%; 
+}
+
+#informacion{
+    font-family: Bernard MT Condensed;
+}
+.vernofile{
+    display: none;
+}

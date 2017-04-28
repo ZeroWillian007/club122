@@ -1,0 +1,186 @@
+<?php
+
+namespace WBJ\UserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuarios
+ *
+ * @ORM\Table(name="Usuarios")
+ * @ORM\Entity
+ */
+class Usuarios
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_user", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idUser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombres", type="string", length=100, nullable=true)
+     */
+    private $nombres;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="apellidos", type="string", length=100, nullable=true)
+     */
+    private $apellidos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nickname", type="string", length=50, nullable=true)
+     */
+    private $nickname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pass", type="string", length=50, nullable=true)
+     */
+    private $pass;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_creacion", type="date", nullable=true)
+     */
+    private $fechaCreacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_update", type="date", nullable=true)
+     */
+    private $fechaUpdate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="medidas", type="string", length=50, nullable=true)
+     */
+    private $medidas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cost", type="integer", nullable=true)
+     */
+    private $cost;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="signo", type="integer", nullable=true)
+     */
+    private $signo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_naci", type="date", nullable=true)
+     */
+    private $fechaNaci;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nacionalidad", type="string", length=80, nullable=true)
+     */
+    private $nacionalidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="provincia", type="string", length=80, nullable=true)
+     */
+    private $provincia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ciudad", type="string", length=80, nullable=true)
+     */
+    private $ciudad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="privi", type="integer", nullable=true)
+     */
+    private $privi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img", type="string", length=100, nullable=true)
+     */
+    private $img;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img2", type="string", length=100, nullable=false)
+     */
+    private $img2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img3", type="string", length=100, nullable=false)
+     */
+    private $img3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img4", type="string", length=100, nullable=false)
+     */
+    private $img4;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="control", type="integer", nullable=true)
+     */
+    private $control;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="extra", type="string", length=100, nullable=false)
+     */
+    private $extra;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opcinal", type="integer", nullable=false)
+     */
+    private $opcinal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=150, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="introduc", type="string", length=255, nullable=true)
+     */
+    private $introduc;
+
+
+}

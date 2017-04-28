@@ -1,0 +1,146 @@
+WBJ\UserBundle\Entity\Usuarios:
+    type: entity
+    table: Usuarios
+    id:
+        idUser:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            column: id_user
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombres:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        apellidos:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        nickname:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        pass:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        fechaCreacion:
+            type: date
+            nullable: true
+            comment: ''
+            column: fecha_creacion
+        fechaUpdate:
+            type: date
+            nullable: true
+            comment: ''
+            column: fecha_update
+        medidas:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        cost:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+        signo:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+        fechaNaci:
+            type: date
+            nullable: true
+            comment: ''
+            column: fecha_naci
+        nacionalidad:
+            type: string
+            nullable: true
+            length: 80
+            fixed: false
+            comment: ''
+        provincia:
+            type: string
+            nullable: true
+            length: 80
+            fixed: false
+            comment: ''
+        ciudad:
+            type: string
+            nullable: true
+            length: 80
+            fixed: false
+            comment: ''
+        privi:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+        img:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        img2:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+        img3:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+        img4:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+        control:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        extra:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+        opcinal:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        email:
+            type: string
+            nullable: false
+            length: 150
+            fixed: false
+            comment: ''
+        introduc:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

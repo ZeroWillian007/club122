@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        
+        
+        {% block stylesheets %}
+            
+              
+               <link rel="stylesheet" type="text/css" href="{{asset('public/css/bootstrap.min.css')}}"/>
+             
+               
+               <link rel="stylesheet" type="text/css" href="{{asset('public/css/style.css')}}"/>
+               
+               <!--PAGINA PRINCIPAL-->
+               
+               
+        
+        {% endblock %}
+        
+        <title>{% block title %}Club-122Quito{% endblock %}</title>
+        </head>
+        <body class="container">
+ 
+        
+        
+            {% block body %}
+             
+            
+            {% endblock %}
+        
+        
+        
+        
+        {% block scripts %}
+              
+              <script src="{{asset('public/js/jquery.min.js')}}"></script>
+              <script src="{{asset('public/js/bootstrap.min.js')}}"></script>
+        <script>
+            $(document).ready(function (){
+               $(window).load(function(){
+                  var op=0;
+                  //imgen perfil
+                  $(function() {
+                      $('#file-perfil').change(function(e) {
+                      op=0;
+                      addImage(e); 
+                      });
+                      $('#file-perfil1').change(function(e) {
+                      op=1;
+                      addImage(e); 
+                      });
+                      $('#file-perfil2').change(function(e) {
+                      op=2;
+                      addImage(e); 
+                      });
+                      $('#file-perfil3').change(function(e) {
+                      op=3;
+                      addImage(e); 
+                      });
+
+                  function addImage(e){
+                     var file = e.target.files[0],
+                     imageType = /image.*/;
+    
+                     if (!file.type.match(imageType))
+                     return;
+  
+                     var reader = new FileReader();
+                     reader.onload = fileOnload;
+                     reader.readAsDataURL(file);
+                 }
+  
+                 function fileOnload(e) {
+                    var result=e.target.result;
+                    switch(op){
+                        case 0:
+                          $('#img-user-perfil').attr("src",result);
+                        break;
+                        case 1:
+                          $('#img-user-perfil1').attr("src",result);
+                        break;
+                        case 2:
+                          $('#img-user-perfil2').attr("src",result);
+                        break;
+                        case 3:
+                          $('#img-user-perfil3').attr("src",result);
+                        break;
+                    }
+                    
+                 }
+                });
+            });
+
+            });
+        </script>
+           
+              
+        {% endblock %}
+    </body>
+</html>

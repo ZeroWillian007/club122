@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+      {{ parent() }}
+
+{% endblock %}
+
+{% block stylesheets %} {{ parent() }}  {% endblock %}
+
+
+{% block body %}
+        {{ parent() }}
+             <div class="row">          
+            <div class="col-md-4">
+                <h1>Club
+                    <p>
+                        <code>122<small>Quito-Ecuador</small></code>
+                    </p>
+                </h1>    
+            </div>       
+        </div>
+         <div class="row">
+           
+            <div class="col-md-12 ">
+                
+                <br/>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">CLUB-122</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+                                <li><a href="{{path('wbj_user_editinfoAdmin')}}">Editar Informacion</a></li>
+                                <li><a href="#meta1">Preferencias</a></li>
+                                <li><a href="{{path('wbj_user_usuarios')}}">Usuarios</a></li>
+                                <li><a href="#">Publicaciones</a></li>
+                                <li><a href="#">Configuracion</a></li>
+                                
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+        <div class="row panel panel-primary">
+            <div class="panel-heading">
+                <strong>INFORMACION DE ADMINISTRADOR </strong>
+            </div>
+            <div class="panel-body">
+                
+                <div class="row"> 
+                  <div class="col-md-6">
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="{{ asset('uploads/fotos/' ~ user.img) }}" alt="Imagen Perfil" class="center-block img-responsive" style="height:7cm">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ asset('uploads/fotos/' ~ user.img2) }}" alt="Imagen Impactante" class="center-block img-responsive" style="height:7cm">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ asset('uploads/fotos/' ~ user.img3) }}" alt="Imagen Sexy" class="center-block img-responsive" style="height:7cm">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ asset('uploads/fotos/' ~ user.img4) }}" alt="Imagen Libre" class="center-block img-responsive" style="height:7cm" >
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="text-info">NOMBRES:</div><mark>{{user.nombres}}</mark>
+                    <div class="text-info">APELLIDOS:</div><mark> {{user.apellidos}}</mark>
+                    <div class="text-info">SIGNO:</div> <mark> {{user.signo}}<mark>
+                    <div class="text-info">NACIONALIDAD:</div><mark>  {{user.nacionalidad}}<mark>
+                    <div class="text-info">PROVINCIA:</div> <mark> {{user.provincia}}<mark>
+                    <div class="text-info">CIUDAD:</div> <mark> {{user.ciudad}}<mark>
+                    <div class="text-info">COMENTARIO:</div> <mark> {{user.introduc}}<mark>
+                  </div>
+                  
+                 
+                  
+                </div>
+            </div>
+            
+        </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                           <a href=" {{path('wbj_user_listartodos')}} "><p class="text-center ">VOLVER</p></a>
+                      </div>
+                      
+                  </div>
+
+
+{% endblock %}
+
+
+
+
+ {% block scripts %} {{ parent() }} {% endblock %}
+

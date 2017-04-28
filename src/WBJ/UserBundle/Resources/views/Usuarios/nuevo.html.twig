@@ -1,0 +1,265 @@
+{% extends 'basenuevo.html.twig' %}
+
+{% block title %}
+
+      {{ parent() }}
+
+{% endblock %}
+
+{% block stylesheets %} {{ parent() }}  {% endblock %}
+
+
+{% block body %}
+        {{ parent() }}
+        
+        <div class="row">          
+            <div class="col-md-4">
+                <h1>Club
+                    <p>
+                        <code>122<small>Quito-Ecuador</small></code>
+                    </p>
+                </h1>    
+            </div>       
+        </div>
+         <div class="row">
+           
+            <div class="col-md-12 ">
+                
+                <br/>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">CLUB-122</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                             <ul class="nav navbar-nav">
+                                <li class="active"><a href="{{ path('wbj_user_userHomeAdmin') }}">HOME <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">Editar Informacion</a></li>
+                                <li><a href="#meta1">Preferencias</a></li>
+                                <li><a href="#">Usuarios</a></li>
+                                <li><a href="#">Publicaciones</a></li>
+                                <li><a href="#">Configuracion</a></li>
+                                
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+        <div class="row panel panel-primary">
+            <div class="panel-heading">
+                <strong>Datos de Nuevo Usuario:</strong>
+            </div>
+            <div class="panel-body">
+
+                {{ form_start(form,{'attr':{'role':'form'}}) }}
+                
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.nombres)}}
+                        </label>
+                        {{ form_widget(form.nombres,{'attr': {'class' : 'form-control' ,'placeholder' : 'Diguite sus Nombres'}}) }}
+                        <span class="text-danger">{{form_errors(form.nombres)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.apellidos)}}
+                        </label>
+                        {{ form_widget(form.apellidos,{'attr': {'class' : 'form-control' ,'placeholder' : 'Diguite sus Apellidos'}}) }}
+                        <span class="text-danger">{{form_errors(form.apellidos)}}</span>
+                    </div>
+                     <div class="form-group">
+                        <label>
+                            {{form_label(form.nickname)}}
+                        </label>
+                        {{ form_widget(form.nickname,{'attr': {'class' : 'form-control' ,'placeholder' : 'Diguite su Nickname'}}) }}
+                        <span class="text-danger">{{form_errors(form.nickname)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.pass)}}
+                        </label>
+                        {{ form_widget(form.pass,{'attr': {'class' : 'form-control'}}) }}
+                        <span class="text-danger">{{form_errors(form.pass)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.medidas)}}
+                        </label>
+                        {{ form_widget(form.medidas,{'attr': {'class' : 'form-control','placeholder' : 'Diguite sus Medidas'}}) }}
+                        <span class="text-danger">{{form_errors(form.medidas)}}</span>
+                    </div>
+                     <div class="form-group">
+                        <label>
+                            {{form_label(form.cost)}}
+                        </label>
+                        {{ form_widget(form.cost,{'attr': {'class' : 'form-control','placeholder' : 'Diguite costo en Dolares'}}) }}
+                        <span class="text-danger">{{form_errors(form.cost)}}</span>
+                    </div>
+                     <div class="form-group">
+                        <label>
+                            {{form_label(form.signo)}}
+                        </label>
+                        {{ form_widget(form.signo,{'attr': {'class' : 'form-control'}}) }}
+                        <span class="text-danger">{{form_errors(form.signo)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.fechaNaci)}}
+                        </label>
+                        {{ form_widget(form.fechaNaci,{'attr': {'class' : 'form-control'}}) }}
+                        <span class="text-danger">{{form_errors(form.fechaNaci)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.nacionalidad)}}
+                        </label>
+                        {{ form_widget(form.nacionalidad,{'attr': {'class' : 'form-control','placeholder' : 'Diguite nacionalidad'}}) }}
+                        <span class="text-danger">{{form_errors(form.nacionalidad)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.provincia)}}
+                        </label>
+                        {{ form_widget(form.provincia,{'attr': {'class' : 'form-control','placeholder' : 'Diguite provincia'}}) }}
+                        <span class="text-danger">{{form_errors(form.provincia)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.ciudad)}}
+                        </label>
+                        {{ form_widget(form.ciudad,{'attr': {'class' : 'form-control','placeholder' : 'Diguite ciudad'}}) }}
+                        <span class="text-danger">{{form_errors(form.ciudad)}}</span>
+                    </div>
+                     <div class="form-group">
+                        <label>
+                            {{form_label(form.privi)}}
+                        </label>
+                        {{ form_widget(form.privi,{'attr': {'class' : 'form-control','placeholder' : 'Diguite ciudad'}}) }}
+                        <span class="text-danger">{{form_errors(form.privi)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.email)}}
+                        </label>
+                        {{ form_widget(form.email,{'attr': {'class' : 'form-control','placeholder' : 'Diguite ciudad'}}) }}
+                        <span class="text-danger">{{form_errors(form.email)}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{form_label(form.introduc)}}
+                        </label>
+                        {{ form_widget(form.introduc,{'attr': {'class' : 'form-control','placeholder' : 'Diguite ciudad'}}) }}
+                        <span class="text-danger">{{form_errors(form.introduc)}}</span>
+                    </div>
+                    
+                 </div>
+                 <div class="col-md-6">
+                        <mark>Por favor elija una foto para su perfil</mark>
+                        
+                        <div class="form-group">
+                           <label>
+                               {{form_label(form.img)}}
+                           </label>
+                              {{ form_widget(form.img, { 'id': 'file-perfil' }) }}
+                              <span class="text-danger">{{form_errors(form.img)}}</span>
+                        </div>
+                        
+                        <pre><strong>OPCIONAL</strong> Por favor elija tres fotos adicionales para su galería</pre>
+                        
+                         <div class="form-group">
+                           <label>
+                               {{form_label(form.img2)}}
+                           </label>
+                              {{ form_widget(form.img2, { 'id': 'file-perfil1' }) }}
+                              <span class="text-danger">{{form_errors(form.img2)}}</span>
+                        </div>
+                        
+                         <div class="form-group">
+                           <label>
+                               {{form_label(form.img3)}}
+                           </label>
+                              {{ form_widget(form.img3, { 'id': 'file-perfil2' }) }}
+                              <span class="text-danger">{{form_errors(form.img3)}}</span>
+                        </div>
+                        
+                         <div class="form-group">
+                           <label>
+                               {{form_label(form.img4)}}
+                           </label>
+                              {{ form_widget(form.img4, { 'id': 'file-perfil3' }) }}
+                              <span class="text-danger">{{form_errors(form.img4)}}</span>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                       
+                        
+                        
+                     <div class="row" style="margin-top: 10%;">
+                        <div class="col-md-3 center-block">
+                            <img src="images/team-1.jpg" id="img-user-perfil"   class="img-responsive img-circle" alt=""/>
+                        </div>
+                        <div class="col-md-3 center-block">
+                            <img src="images/team-1.jpg" id="img-user-perfil1" class="img-responsive img-thumbnail" alt=""/>
+                        </div>
+                        <div class="col-md-3 center-block">
+                            <img src="images/team-1.jpg" id="img-user-perfil2"  class="img-responsive img-thumbnail" alt=""/>
+                        </div>
+                        <div class="col-md-3 center-block">
+                            <img src="images/team-1.jpg" id="img-user-perfil3"  class="img-responsive img-thumbnail" alt=""/>
+                        </div>
+                    </div>
+                        
+                        
+                        
+                        
+                        
+                    
+                 </div>
+                    
+                 <p>
+                    {{ form_widget(form.Guardar,{'attr': {'class' : 'btn btn-default btn-block '}}) }}
+                 </p>
+                  
+                    
+                {{form_end(form)}}
+               
+            </div>
+        </div>
+       
+        
+        
+     
+       
+        
+       
+            
+
+
+
+ {% endblock %}
+
+
+
+
+ {% block scripts %} 
+ {{ parent() }}
+   
+ {% endblock %}
+
+

@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+      {{ parent() }}
+
+{% endblock %}
+
+{% block stylesheets %} {{ parent() }}  {% endblock %}
+
+
+{% block body %}
+        {{ parent() }}
+              <div class="row">          
+            <div class="col-md-4">
+                <h1>Club
+                    <p>
+                        <code>122<small>Quito-Ecuador</small></code>
+                    </p>
+                </h1>    
+            </div>       
+        </div>
+         <div class="row">
+           
+            <div class="col-md-12 ">
+                
+                <br/>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">CLUB-122</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#home">HOME <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">Informacion</a></li>
+                                <li><a href="#meta1">Preferencias</a></li>
+                                <li><a href="#servicios">Fotos</a></li>
+                                <li><a href="#">Galeria</a></li>
+                                <li><a href="#">Nuestro Equipo</a></li>
+                                
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+        <div class="row panel panel-primary">
+            <div class="panel-heading">
+                <p class="text-center">OPCIONES DE ADMINISTRADOR</p>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12 ">
+                    <form>
+                        <a href="{{path('wbj_user_nuevoUsuario')}}" class="btn btn-default center-block" style="margin-top: 1cm; width: 30%;padding-bottom: 1cm;padding-top: 1cm;">CREAR USUARIO</a>
+                        <a href="{{path('wbj_user_editarusernoadmin')}}" class="btn btn-default center-block" style="margin-top: 1cm;width: 30%;padding-bottom: 1cm;padding-top: 1cm;">EDITAR USUARIO</a>
+                        <a class="btn btn-default center-block" style="margin-top: 1cm;width: 30%;padding-bottom: 1cm;padding-top: 1cm; margin-bottom: 1cm;">BORRAR USUARIO</a>
+                    </form>
+                </div>   
+            </div>    
+        </div>
+
+{% endblock %}
+
+
+
+
+ {% block scripts %} {{ parent() }} {% endblock %}
+

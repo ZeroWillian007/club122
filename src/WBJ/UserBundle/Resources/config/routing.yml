@@ -1,0 +1,85 @@
+
+
+
+
+wbj_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: WBJUserBundle:Default:index }
+
+
+wbj_user_add:
+    path:     /user/add
+    defaults: { _controller: WBJUserBundle:User:add }
+
+
+wbj_user_login:
+    path:     /user/login
+    defaults: { _controller: WBJUserBundle:User:login }
+
+
+wbj_user_home:
+    path:     /index
+    defaults: { _controller: WBJUserBundle:User:index }
+
+
+wbj_user_nuevoUsuario:
+    path:     /user/nuevo
+    defaults: { _controller: WBJUserBundle:User:nuevoUsuario }
+
+wbj_user_userHome:
+    path:     /user/homeusuario
+    defaults: { _controller: WBJUserBundle:User:userHome }
+
+wbj_user_userHomeAdmin:
+    path:     /user/homeadmin
+    defaults: { _controller: WBJUserBundle:User:userHomeAdmin }
+
+wbj_user_editinfoAdmin:
+    path:     /user/admin/editinfo/
+    defaults: { _controller: WBJUserBundle:User:edifinfo }
+
+wbj_user_createUser:
+    path:     /user/admin/createuser/
+    defaults: { _controller: WBJUserBundle:User:createUser }
+    methods: POST
+
+wbj_user_usuarios:
+    path:     /user/admin/usuarios/
+    defaults: { _controller: WBJUserBundle:User:usuarios }
+    
+
+wbj_user_actualizar:
+    path:     /user/admin/actualizar/
+    defaults: { _controller: WBJUserBundle:User:actualizar }
+    methods: POST
+
+wbj_user_editarusernoadmin:
+    path:     /user/admin/users/editar
+    defaults: { _controller: WBJUserBundle:User:editarUser }
+    
+
+wbj_user_borrarusernoadmin:
+    path:     /user/admin/users/borrar
+    defaults: { _controller: WBJUserBundle:User:borrarUser }
+    
+wbj_user_buscarusereditar:
+    path:     /user/admin/users/editar/buscar
+    defaults: { _controller: WBJUserBundle:User:buscarUserEditar }
+    methods: POST
+    
+    
+    
+wbj_user_buscarusereditarporid:
+    path:     /user/admin/users/editar/porid
+    defaults: { _controller: WBJUserBundle:User:actualizarporid }
+    methods: POST
+    
+wbj_user_listartodos:
+    path:     /user/admin/users/listar/todos
+    defaults: { _controller: WBJUserBundle:User:listar }    
+    
+    
+wbj_user_listartodos-listar:
+    path:     /user/admin/users/listar/{id}
+    defaults: { _controller: WBJUserBundle:User:listarrevisar }        
+    

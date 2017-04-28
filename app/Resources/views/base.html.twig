@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        
+        
+        {% block stylesheets %}
+            
+              
+               <link rel="stylesheet" type="text/css" href="{{asset('public/css/bootstrap.min.css')}}"/>
+             
+               
+               <link rel="stylesheet" type="text/css" href="{{asset('public/css/style.css')}}"/>
+               
+               <!--PAGINA PRINCIPAL-->
+               
+               
+        
+        {% endblock %}
+        
+        <title>{% block title %}Club-122Quito{% endblock %}</title>
+        </head>
+        <body class="container">
+ 
+        
+        
+            {% block body %}
+             
+            
+            {% endblock %}
+        
+        
+        
+        
+        {% block scripts %}
+              
+              <script src="{{asset('public/js/jquery.min.js')}}"></script>
+              <script src="{{asset('public/js/bootstrap.min.js')}}"></script>
+              
+           
+              
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+      {{ parent() }}
+
+{% endblock %}
+
+{% block stylesheets %} {{ parent() }}  {% endblock %}
+
+
+{% block body %}
+        {{ parent() }}
+             <div class="row">          
+            <div class="col-md-4">
+                <h1>Club
+                    <p>
+                        <code>122<small>Quito-Ecuador</small></code>
+                    </p>
+                </h1>    
+            </div>       
+        </div>
+         <div class="row">
+           
+            <div class="col-md-12 ">
+                
+                <br/>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">CLUB-122</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+                                <li><a href="{{path('wbj_user_editinfoAdmin')}}">Editar Informacion</a></li>
+                                <li><a href="{{path('wbj_user_listartodos')}}">Explorar</a></li>
+                                <li><a href="{{path('wbj_user_usuarios')}}">Usuarios</a></li>
+                                <li><a href="#">Publicaciones</a></li>
+                                <li><a href="#">Configuracion</a></li>
+                                
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+        <div class="row panel panel-primary">
+            <div class="panel-heading">
+                <strong>INFORMACION DE ADMINISTRADOR <small>{{ user.fechaUpdate|date('Y-m-d') }}</small> </strong>
+            </div>
+            <div class="panel-body">
+                 
+                
+                <div class="col-md-6 panel panel-danger panel-body">
+
+                    
+                    <div class="text-info">NOMBRES:</div><mark>{{user.nombres}}</mark>
+                    <div class="text-info">APELLIDOS:</div><mark> {{user.apellidos}}</mark>
+                    <div class="text-info">NICKNAME:</div> <mark>{{user.nickname}}<mark>
+                    <div class="text-info">CONTRASEÑA:</div> <mark>{{user.pass}}<mark>
+                    <div class="text-info">SIGNO:</div> <mark> {{user.signo}}<mark>
+                    <div class="text-info">NACIONALIDAD:</div><mark>  {{user.nacionalidad}}<mark>
+                    <div class="text-info">PROVINCIA:</div> <mark> {{user.provincia}}<mark>
+                    <div class="text-info">CIUDAD:</div> <mark> {{user.ciudad}}<mark>
+                    <div class="text-info">COMENTARIO:</div> <mark> {{user.introduc}}<mark>
+                </div>
+                
+                <div class="col-md-6">
+                    
+                       <img src="{{ asset('uploads/fotos/' ~ user.img) }}" class="center-block img-responsive" />
+                       <br/>
+                       
+                       <p class="text-justify">
+                           Bienvenido a la aplicación señor <mark> {{user.nombres}} {{user.apellidos}} </mark> administrador le damos un cordial salúdalo  
+                       </p>
+                </div>
+                
+            </div>
+        </div>
+
+
+{% endblock %}
+
+
+
+
+ {% block scripts %} {{ parent() }} {% endblock %}
+
